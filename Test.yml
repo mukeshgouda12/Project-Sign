@@ -1,0 +1,7 @@
+hosts: localhost
+remote_user: root
+tasks:
+ - name: clone the repo
+   ansible.builtin.git:
+    repo: 
+    dest: /root/gitrepo
