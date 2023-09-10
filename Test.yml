@@ -16,7 +16,10 @@
      create: true
      block: |
       "{{ Content }}"
-  - shell: git add .
-  - shell: git commit -m "Project Signing done"
-  - shell: git push     
+  - shell:
+     cmd: git add .
+  - shell:
+     cmd: git commit -m "Project Signing done"
+  - shell: 
+     cmd: git push     
    
