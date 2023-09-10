@@ -11,11 +11,11 @@ tasks:
     dest: "{{ Directory_Name }}"
  - name: Create MANIFEST.in file
    blockinfile:
-    path: "{{ Directory_Name }}" /MANIFEST.in
+    path: "{{ Directory_Name }}/MANIFEST.in"
+    create: true
     block: |
      "{{ Content }}"
  - shell: git add .
  - shell: git commit -m "Project Signing done"
- - shell: git push 
-     
+ - shell: git push     
    
