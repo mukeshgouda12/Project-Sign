@@ -5,7 +5,7 @@
   - name: Create Repo-Directory
     file:
      path: "{{ Directory_Name }}"
-     satte: directory
+     state: directory
   - name: clone the repo
     ansible.builtin.git:
      repo: "{{ URL }}"
