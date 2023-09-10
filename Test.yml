@@ -11,7 +11,7 @@ tasks:
     dest: "{{ Directory_Name }}"
  - name: Create MANIFEST.in file
    blockinfile:
-    path: "{{ Directory_Name }}"/MANIFEST.in
+    path: "{{ Directory_Name }}" /MANIFEST.in
     block: |
      "{{ Content }}"
  - shell: git add .
