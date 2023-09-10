@@ -4,7 +4,7 @@
   tasks:
   - name: Create Repo-Directory
     file:
-     path: "{{ Directory_Name }}"
+     path: "/root/{{ Directory_Name }}"
      state: directory
   - name: clone the repo
     ansible.builtin.git:
