@@ -17,8 +17,10 @@
      block: |
       "{{ Content }}"
   - shell:
+     chdir: "/root/{{ Directory_Name }}"
      cmd: git add .
   - shell:
+     chdir: "/root/{{ Directory_Name }}"
      cmd: git commit -m "Project Signing done"
   - shell: 
      cmd: git push     
