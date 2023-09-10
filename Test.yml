@@ -1,7 +1,21 @@
 hosts: localhost
 remote_user: root
 tasks:
+ - name: Create Repo-Directory
+   file:
+    path: "{{ Directory_Name }}"
+    satte: directory
  - name: clone the repo
    ansible.builtin.git:
-    repo: 
-    dest: /root/gitrepo
+    repo: "{{ URL }}"
+    dest: "{{ Directory_Name }}"
+ - name: Create MANIFEST.in file
+   blockinfile:
+    path: "{{ Directory_Name }}"/MANIFEST.in
+    block: |
+     "{{ Content }}"
+ - shell: git add .
+ - shell: git commit -m "Project Signing done"
+ - shell: git push 
+     
+   
